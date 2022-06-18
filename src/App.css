@@ -1,34 +1,25 @@
 .App {
   text-align: center;
-  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainAnchor {
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CFS_LOGO {
+  width: 100%;
+  height: 70vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  font-size: 10rem;
+.comingSoon {
+  width: 100%;
+  height: 30vh;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #D4AF37;  
+  color: #c8ab64;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
