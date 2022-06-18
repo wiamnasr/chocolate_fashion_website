@@ -7,8 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 body,
@@ -21,3 +19,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+

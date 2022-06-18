@@ -1,0 +1,32 @@
+.sidebar-content {
+  /* text-align: center; */
+  margin: 1rem;
+}
+
+.activeClicked {
+  background-color: #c8ab64;
+  display: flex;
+  justify-content: center;
+}
+
+.activeClicked:hover {
+  background-color: #f9f9fa3f;
+  font-weight: bold;
+  transition: ease-in;
+}
+
+.CFS_LOGO_NAVBAR_FOOTER {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.849);
+  height: 12.5vh;
+  margin: 0;
+  border-style: none;
+}
+
+.CFS_LOGO_NAVBAR_FOOTER_Minimized {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.849);
+  height: 6vh;
+  margin: 0;
+  border-style: none;
+}
