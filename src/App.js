@@ -17,7 +17,7 @@ function App() {
           className='CFS_LOGO'
         ></img>
 
-        <h2 className='comingSoon'>Coming Soon</h2>
+        <h2 className='comingSoon'>Coming Soon...</h2>
       </a>
     </div>
   );
