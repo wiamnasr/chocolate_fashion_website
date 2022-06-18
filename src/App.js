@@ -6,8 +6,8 @@ function App() {
   return (
     <div className='App'>
       <a
-        className="mainAnchor"
-        href='https://www.facebook.com/chocol8fashion/'
+        className='mainAnchor'
+        href='https://www.facebook.com/chocolatefashionsignature'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -17,7 +17,7 @@ function App() {
           className='CFS_LOGO'
         ></img>
 
-        <h2 className="comingSoon">Coming Soon</h2>
+        <h2 className='comingSoon'>Coming Soon</h2>
       </a>
     </div>
   );
