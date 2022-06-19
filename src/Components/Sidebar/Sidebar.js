@@ -50,6 +50,7 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
   return (
     <div className='sidebar'>
       <CDBSidebar
+        toggled={windowDimension.winWidth < 500 ? false : true}
         textColor='#fff'
         backgroundColor='#c8ab64'
         breakpoint={800}
