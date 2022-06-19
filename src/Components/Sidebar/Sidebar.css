@@ -1,3 +1,12 @@
+.sidebar {
+  display: flex;
+  height: calc(100vh - 0px);
+  overflow: scroll initial;
+}
+
+.cdbSidebar {
+}
+
 .sidebar-content {
   /* text-align: center; */
   margin: 1rem;

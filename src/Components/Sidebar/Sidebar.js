@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
@@ -13,6 +13,8 @@ import {
 
 import { NavLink } from "react-router-dom";
 
+import ContactUsButton from "../ContactUsButton/ContactUsButton";
+
 const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
   const [activeClassNameClicked, setActiveClassNameClicked] = useState(true);
   console.log(activeClassNameClicked);
@@ -25,22 +27,69 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
     setContactUsShowModal(!contactUsShowModal);
   };
 
+  const [windowDimension, detectHW] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight,
+  });
+
+  const detectSize = () => {
+    detectHW({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", detectSize);
+
+    return () => {
+      window.removeEventListener("resize", detectSize);
+    };
+  }, [windowDimension]);
+
   return (
-    <div
-      style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
-    >
-      <CDBSidebar textColor='#fff' backgroundColor='#c8ab64'>
+    <div className='sidebar'>
+      <CDBSidebar
+        textColor='#fff'
+        backgroundColor='#c8ab64'
+        breakpoint={800}
+        minWidth={
+          windowDimension.winWidth < 500
+            ? "50px"
+            : windowDimension.winWidth < 700
+            ? "70px"
+            : "80px"
+        }
+        maxWidth={
+          windowDimension.winWidth < 500
+            ? "100vw"
+            : windowDimension.winWidth < 750
+            ? "50vw"
+            : windowDimension.winWidth < 1050
+            ? "40vw"
+            : ""
+        }
+        className='cdbSidebar'
+      >
         <CDBSidebarHeader
           prefix={<i className='fa fa-bars fa-large'></i>}
           onClick={sidebarClickHandler}
         >
-          <button
-            className='contactUs'
-            style={{ color: "inherit" }}
-            onClick={contactUsClickHandler}
+          <div
+            className='container'
+            style={{ display: "flex", alignItems: "center" }}
           >
-            Contact Us
-          </button>
+            <img
+              src={CFS_LOGO_TRANSPARENT}
+              alt='Chocolate Fashion Signature Logo'
+              style={{
+                width: "20%",
+                maxHeight: "5%",
+                background: "rgba(255, 255, 255, 0.849)",
+              }}
+            />
+          </div>
+          <ContactUsButton contactUsClickHandler={contactUsClickHandler} />
         </CDBSidebarHeader>
 
         <CDBSidebarContent className='sidebar-content'>
