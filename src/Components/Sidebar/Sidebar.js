@@ -67,7 +67,7 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
             ? "50vw"
             : windowDimension.winWidth < 1050
             ? "40vw"
-            : ""
+            : "15vw"
         }
         className='cdbSidebar'
       >
