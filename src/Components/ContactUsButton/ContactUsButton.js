@@ -1,14 +1,12 @@
 import "./ContactUsButton.css";
 
+
 const ContactUsButton = ({ contactUsClickHandler }) => {
   return (
-    <button
-      className='contactUs'
-      style={{ color: "inherit" }}
-      onClick={contactUsClickHandler}
-    >
+    <button className='contactUsButtonSideBar' onClick={contactUsClickHandler}>
       Contact Us
     </button>
+   
   );
 };
 

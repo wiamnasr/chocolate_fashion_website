@@ -67,8 +67,8 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
             : windowDimension.winWidth < 750
             ? "50vw"
             : windowDimension.winWidth < 1050
-            ? "40vw"
-            : "15vw"
+            ? "30vw"
+            : "20vw"
         }
         className='cdbSidebar'
       >
@@ -80,15 +80,6 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
             className='container'
             style={{ display: "flex", alignItems: "center" }}
           >
-            <img
-              src={CFS_LOGO_TRANSPARENT}
-              alt='Chocolate Fashion Signature Logo'
-              style={{
-                width: "20%",
-                maxHeight: "5%",
-                background: "rgba(255, 255, 255, 0.849)",
-              }}
-            />
           </div>
           <ContactUsButton contactUsClickHandler={contactUsClickHandler} />
         </CDBSidebarHeader>

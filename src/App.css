@@ -1,35 +1,71 @@
 .App {
+  display: flex;
   text-align: center;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: flex-start;
+  
 }
 
-.sidebar {
+.homePageSidebarSection {
   width: 10%;
-  height: 100vh;
-  
+  height: 90vh;
+}
+
+.homePageNavigationSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 90%;
+  height: 90vh;
 
 }
 
 .mainAnchor {
   text-decoration: none;
-  width: 90%;
-  height: 100vh;
+  width: 100%;
+  height: 30vh;
 }
 
+.HomePageSlideShow {
+  width: 100%;
+  height: 60vh;
+  margin: 0 0 0 2rem;
+  overflow: hidden;
+}
+
+
+
 .CFS_LOGO {
-  max-width: 100%;
-  height: 70vh;
+  width: 100%;
+  height: 70%;
 }
 
 .comingSoon {
   width: 100%;
-  height: 30vh;
+  height: 30%;
   font-size: 1.5rem;
   font-weight: 700;
   color: #c8ab64;
   text-decoration: none;
 }
 
+
+@media screen and (min-width: 768px) {
+
+  .HomePageSlideShow {
+    /* background-color: red; */
+    padding: 0 0 0 20%;
+    
+    /* width: 80%; */
+  }
+    
+}
+
+@media screen and (min-width: 950px) {
+  .homePageNavigationSection {
+    /* background-color: green; */
+    padding-left: 20%;
+    width: 80%;
+  }
+
+}
