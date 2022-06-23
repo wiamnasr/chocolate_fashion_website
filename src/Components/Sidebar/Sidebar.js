@@ -79,8 +79,7 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
           <div
             className='container'
             style={{ display: "flex", alignItems: "center" }}
-          >
-          </div>
+          ></div>
           <ContactUsButton contactUsClickHandler={contactUsClickHandler} />
         </CDBSidebarHeader>
 
@@ -91,9 +90,9 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
                 Home
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to='/About'>
+            <NavLink exact to='/Categories'>
               <CDBSidebarMenuItem className='activeClicked'>
-                About CF Signature
+                Categories
               </CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>

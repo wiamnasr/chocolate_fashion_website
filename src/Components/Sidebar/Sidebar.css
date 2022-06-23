@@ -1,6 +1,10 @@
 .sidebar {
+  position: fixed;
+  top:  - 150px;
+  left: 0;
   display: flex;
   height: 100%;
+  overflow: hidden;
 }
 
 .cdbSidebar {

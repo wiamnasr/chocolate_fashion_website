@@ -32,7 +32,8 @@ const HomePageSlideShow = () => {
   return (
     <div className='mainPageSlideshow'>
       <div className="picturesSliderSection">
-        <Slide autoplay={autoplay}>
+        {/* <Slide autoplay={autoplay}> */}
+          <Slide autoplay={true}>
           {HomePageSlideShowMedia.map((image, index) => (
             <div style={style} key={image}>
               <img
@@ -40,13 +41,13 @@ const HomePageSlideShow = () => {
                 alt='sample chocolate display by Chocolate Fashion Signature'
                 className='mainPageSlidShowImage'
               />
-              Slide {index + 1}
+              {/* Slide {index + 1} */}
             </div>
           ))}
         </Slide>
       </div>
 
-      <div className='autoplay-buttons'>
+      {/* <div className='autoplay-buttons'>
         Autplay is {autoplay ? "on" : "off"}
       </div>
       <div className='autoplay-buttons'>
@@ -56,7 +57,7 @@ const HomePageSlideShow = () => {
         <button type='button' onClick={() => setAutoplay(true)}>
           Play
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

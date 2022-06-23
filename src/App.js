@@ -1,49 +1,48 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-import Sidebar from "./Components/Sidebar/Sidebar";
-import ContactUsModal from "./Components/ContactUsModal/ContactUsModal";
-import { BrowserRouter as Router } from "react-router-dom";
 
-import HomePageSlideShow from "./Components/HomePageSlideShow/HomePageSlideShow";
+// import HomePageSlideShow from "./Components/HomePageSlideShow/HomePageSlideShow";
 
-import CFS_LOGO_TRANSPARENT from "./Resources/svg/CFS_LOGO_TRANSPARENT.svg";
+import Home from "./pages/Home/Home";
+import Header from "./Components/Header/Header";
+import Categories from "./pages/Categories/Categories";
+import CategoryOptions from "./pages/CategoryOptions/CategoryOptions";
 
 function App() {
-  const [contactUsShowModal, setContactUsShowModal] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategoryOption, setSelectedCategoryOption] = useState("");
+
   return (
     <Router>
-      <div className='App'>
-        <div className='homePageSidebarSection'>
-          <Sidebar
-            setContactUsShowModal={setContactUsShowModal}
-            contactUsShowModal={contactUsShowModal}
-          />
-        </div>
-
-        <div className='homePageNavigationSection'>
-          <a
-            className='mainAnchor'
-            href='https://www.facebook.com/chocolatefashionsignature'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img
-              src={CFS_LOGO_TRANSPARENT}
-              alt='Chocolate Fashion Logo, Transparent'
-              className='CFS_LOGO'
-            ></img>
-
-            <h2 className='comingSoon'>Coming Soon...</h2>
-          </a>
-
-          <div className='HomePageSlideShow'>
-            <HomePageSlideShow />
-          </div>
-        </div>
-      </div>
-      {contactUsShowModal ? (
-        <ContactUsModal setContactUsShowModal={setContactUsShowModal} />
-      ) : null}
+      {/* <Header /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route
+          path='/Categories'
+          element={<Categories setSelectedCategory={setSelectedCategory} />}
+        />
+        <Route
+          path='/Categories/:categoryOption'
+          element={
+            <CategoryOptions
+              selectedCategory={selectedCategory}
+              setSelectedCategoryOption={setSelectedCategoryOption}
+            />
+          }
+        />
+        {/* <Route
+          path='/categories/:categoryOption/:categoryOptionDisplays'
+          element={
+            <CategoryOptionDisplays
+              selectedCategory={selectedCategory}
+              selectedCategoryOption={selectedCategoryOption}
+            />
+          }
+        /> */}
+        {/* Showing the NotFound component on any other route that doesn't exist */}
+        {/* <Route path='/*' element={<NotFound />} /> */}
+      </Routes>
+      {/* <GlobalStyle /> */}
     </Router>
   );
 }
