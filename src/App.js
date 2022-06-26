@@ -1,48 +1,55 @@
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-
-// import HomePageSlideShow from "./Components/HomePageSlideShow/HomePageSlideShow";
-
 import Home from "./pages/Home/Home";
-import Header from "./Components/Header/Header";
 import Categories from "./pages/Categories/Categories";
-import CategoryOptions from "./pages/CategoryOptions/CategoryOptions";
+import Engagements from "./pages/Engagements/Engagements";
+import GiftGiving from "./pages/GiftGiving/GiftGiving";
+import SpecialOccasions from "./pages/SpecialOccasions/SpecialOccasions";
+import Baptism from "./pages/Baptism/Baptism";
+import Communion from "./pages/Communion/Communion";
+import NewBorn from "./pages/NewBorn/NewBorn";
+import Weddings from "./pages/Weddings/Weddings";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedCategoryOption, setSelectedCategoryOption] = useState("");
+  console.log("App level - selected category: ");
+  console.log(selectedCategory);
 
   return (
     <Router>
-      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
-          path='/Categories'
+          path='/categories'
           element={<Categories setSelectedCategory={setSelectedCategory} />}
         />
         <Route
-          path='/Categories/:categoryOption'
-          element={
-            <CategoryOptions
-              selectedCategory={selectedCategory}
-              setSelectedCategoryOption={setSelectedCategoryOption}
-            />
-          }
+          path='/Categories/Special_Occasions/Engagements'
+          element={<Engagements />}
         />
-        {/* <Route
-          path='/categories/:categoryOption/:categoryOptionDisplays'
-          element={
-            <CategoryOptionDisplays
-              selectedCategory={selectedCategory}
-              selectedCategoryOption={selectedCategoryOption}
-            />
-          }
-        /> */}
-        {/* Showing the NotFound component on any other route that doesn't exist */}
-        {/* <Route path='/*' element={<NotFound />} /> */}
+        <Route
+          path='/Categories/Special_Occasions/Weddings'
+          element={<Weddings />}
+        />
+        <Route
+          path='/Categories/Special_Occasions/Baptism'
+          element={<Baptism />}
+        />
+        <Route
+          path='/Categories/Special_Occasions/Communion'
+          element={<Communion />}
+        />
+        <Route
+          path='/Categories/Special_Occasions/New_Born'
+          element={<NewBorn />}
+        />
+        <Route path='/Categories/Gift_Giving' element={<GiftGiving />} />
+        <Route
+          path='/Categories/Special_Occasions'
+          element={<SpecialOccasions />}
+        />
       </Routes>
-      {/* <GlobalStyle /> */}
     </Router>
   );
 }

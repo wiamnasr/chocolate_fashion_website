@@ -2,7 +2,7 @@ import "./Home.css";
 import React, { useState } from "react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import ContactUsModal from "../../Components/ContactUsModal/ContactUsModal";
-
+import CFS_LOGO_BACKGROUND from "../../Resources/png/HomePageIcon.jpg";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
 const Home = () => {
@@ -23,6 +23,11 @@ const Home = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
+          <img
+            src={CFS_LOGO_BACKGROUND}
+            alt='Chocolate Fashion Logo, Transparent'
+            className='CFS_LOGO_BACKGROUND'
+          ></img>
           <img
             src={CFS_LOGO_TRANSPARENT}
             alt='Chocolate Fashion Logo, Transparent'

@@ -1,36 +1,43 @@
 import CategoriesThumb from "../../Components/CategoriesThumb/CategoriesThumb";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import ContactUsModal from "../../Components/ContactUsModal/ContactUsModal";
 
 import { CategoriesPage, CategoriesList } from "./Categories.styles";
 
 const WebsiteCategories = [
   {
     key: "SO",
-    name: "Special_Occasions",
-    categoryImageUrl:
-      "https://storage.googleapis.com/chocolatefashionsignature.com/Categories/CAT-Special_Occasions.jpg",
+    name: "Special Occasions",
+    categoryImageUrl: "",
   },
   {
-    key: "WD",
-    name: "Window_Displays",
-    categoryImageUrl:
-      "https://storage.googleapis.com/chocolatefashionsignature.com/Categories/CAT-Window_Displays.png",
+    key: "EN",
+    name: "Engagements",
+    categoryImageUrl: "",
   },
   {
     key: "EV",
     name: "Events",
-    categoryImageUrl:
-      "https://storage.googleapis.com/chocolatefashionsignature.com/Categories/CAT-Events.jpg",
+    categoryImageUrl: "",
   },
   {
-    key: "GI",
-    name: "Gifting",
-    categoryImageUrl:
-      "https://storage.googleapis.com/chocolatefashionsignature.com/Categories/CAT-Gifting.jpg",
+    key: "GG",
+    name: "Gift Giving",
+    categoryImageUrl: "",
+  },
+
+  {
+    key: "WD",
+    name: "Window Displays",
+    categoryImageUrl: "",
   },
 ];
 
-const Categories = ({ setSelectedCategory }) => {
+const Categories = ({
+  setSelectedCategory,
+  contactUsShowModal,
+  setContactUsShowModal,
+}) => {
   return (
     <CategoriesPage>
       <Sidebar />
@@ -48,6 +55,9 @@ const Categories = ({ setSelectedCategory }) => {
           </li>
         ))}
       </CategoriesList>
+      {contactUsShowModal ? (
+        <ContactUsModal setContactUsShowModal={setContactUsShowModal} />
+      ) : null}
     </CategoriesPage>
   );
 };

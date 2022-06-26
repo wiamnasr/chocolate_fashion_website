@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
   border-radius: 20px;
   padding: 5px;
   text-align: center;
+  margin: 0.5rem;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-flow: row wrap;
 
   h3 {
     margin: 10px 0 0 0;
@@ -19,9 +24,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  display: block;
-  width: 600px;
-  height: 500px;
+  display: flex;
+  width: 390px;
+  height: 100%;
   object-fit: cover;
   border-radius: 15px;
 `;

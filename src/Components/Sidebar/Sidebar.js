@@ -15,9 +15,9 @@ import { NavLink } from "react-router-dom";
 
 import ContactUsButton from "../ContactUsButton/ContactUsButton";
 
-const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
+const Sidebar = ({ setContactUsShowModal, contactUsShowModal, back }) => {
   const [activeClassNameClicked, setActiveClassNameClicked] = useState(true);
-  console.log(activeClassNameClicked);
+  // console.log(activeClassNameClicked);
 
   const sidebarClickHandler = () =>
     setActiveClassNameClicked(!activeClassNameClicked);
@@ -51,8 +51,8 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
     <div className='sidebar'>
       <CDBSidebar
         toggled={windowDimension.winWidth < 500 ? true : false}
-        textColor='#fff'
-        backgroundColor='#c8ab64'
+        textColor='rgb(200, 171, 100)'
+        backgroundColor='rgba(255, 255, 255, 0.849)'
         breakpoint={800}
         minWidth={
           windowDimension.winWidth < 500
@@ -80,7 +80,20 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
             className='container'
             style={{ display: "flex", alignItems: "center" }}
           ></div>
-          <ContactUsButton contactUsClickHandler={contactUsClickHandler} />
+          {/* <ContactUsButton contactUsClickHandler={contactUsClickHandler} /> */}
+          {!!back && (
+            <h2
+              onClick={() => back("")}
+              style={{
+                color: "rgb(200, 171, 100)",
+                width: "60px",
+                height: "60px",
+                cursor: "pointer",
+              }}
+            >
+              Back
+            </h2>
+          )}
         </CDBSidebarHeader>
 
         <CDBSidebarContent className='sidebar-content'>
@@ -90,9 +103,49 @@ const Sidebar = ({ setContactUsShowModal, contactUsShowModal }) => {
                 Home
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to='/Categories'>
+            {/* <NavLink exact to='/Categories'>
               <CDBSidebarMenuItem className='activeClicked'>
                 Categories
+              </CDBSidebarMenuItem>
+            </NavLink> */}
+            <NavLink exact to='/Categories/Special_Occasions'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Special Occasions
+              </CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to='/Categories/Special_Occasions/Engagements'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Engagements
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Special_Occasions/Weddings'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Weddings
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Special_Occasions/Baptism'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Baptism
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Special_Occasions/Communion'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Communion
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Special_Occasions/New_Born'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                New Born
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Gift_Giving'>
+              <CDBSidebarMenuItem className='activeClicked'>
+                Gift Giving
               </CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
