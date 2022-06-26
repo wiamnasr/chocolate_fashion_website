@@ -49,6 +49,7 @@ function App() {
           path='/Categories/Special_Occasions'
           element={<SpecialOccasions />}
         />
+        <Route path='/*' element={<Home />} />
       </Routes>
     </Router>
   );
