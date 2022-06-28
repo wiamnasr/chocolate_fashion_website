@@ -5,10 +5,22 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import React, { useState } from "react";
 
 const BaptismSubcategoryImages = [
-  { name: "Charbel", url: "" },
-  { name: "I am a child of GOD jesus de prague", url: "" },
-  { name: "John gold", url: "" },
-  { name: "Selena", url: "" },
+  {
+    name: "Charbel",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Baptism%2FAll_Baptism%2FCharbel%2FIMG_4797.JPG",
+  },
+  {
+    name: "I am a child of GOD jesus de prague",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Baptism%2FAll_Baptism%2FI%20am%20a%20child%20of%20GOD%20jesus%20de%20prague%2FIMG-20181102-WA0009.jpg",
+  },
+  {
+    name: "John gold",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Baptism%2FAll_Baptism%2FJohn%20gold%2FIMG_4841.JPG",
+  },
+  {
+    name: "Selena",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Baptism%2FAll_Baptism%2FSelena%2FIMG_4721.JPG",
+  },
 ];
 
 const Baptism = ({ windowDimension }) => {

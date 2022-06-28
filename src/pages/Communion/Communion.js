@@ -5,11 +5,26 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import React, { useState } from "react";
 
 const CommunionSubcategoryImages = [
-  { name: "2 Angels", url: "" },
-  { name: "Calice", url: "" },
-  { name: "Crystal Cross", url: "" },
-  { name: "Lynn", url: "" },
-  { name: "Rhea", url: "" },
+  {
+    name: "2 Angels",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Communion%2F1stCommunion%2F2%20Angels%2F20140510_195034.jpg",
+  },
+  {
+    name: "Calice",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Communion%2F1stCommunion%2FCalice%2FDSC_0163.JPG",
+  },
+  {
+    name: "Crystal Cross",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Communion%2F1stCommunion%2FCrystal%20Cross%2FIMG-20160507-WA0021.jpg",
+  },
+  {
+    name: "Lynn",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Communion%2F1stCommunion%2FLynn%2FIMG_3303.JPG",
+  },
+  {
+    name: "Rhea",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Communion%2F1stCommunion%2FRhea%2FIMG_3202.JPG",
+  },
 ];
 
 const Communion = ({ windowDimension }) => {
