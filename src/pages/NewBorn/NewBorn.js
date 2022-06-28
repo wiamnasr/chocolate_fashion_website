@@ -9,7 +9,7 @@ const NewBornSubcategoryImages = [
   { name: "Baby Girl", url: "" },
 ];
 
-const NewBorn = () => {
+const NewBorn = ({ windowDimension }) => {
   const [newBornDisplay, setNewBornDisplay] = useState("");
   const [
     newBornSelectedDisplaySubcategory2,
@@ -20,14 +20,10 @@ const NewBorn = () => {
     const allSubcategory = NewBornData.map((photo) => photo.Subcategory);
     const subcategory = new Set(allSubcategory);
     const subcategoryArray = Array.from(subcategory);
-    console.log(subcategoryArray);
 
     return subcategoryArray.map((subcategory2, index) => (
       <div
-        onClick={() =>
-          setNewBornDisplay(NewBornSubcategoryImages[index].name) &&
-          console.log(NewBornSubcategoryImages[index].name)
-        }
+        onClick={() => setNewBornDisplay(NewBornSubcategoryImages[index].name)}
       >
         <CategoryOptionsThumb
           description={subcategory2}
@@ -47,7 +43,6 @@ const NewBorn = () => {
     ).map((photo) => photo.Subcategory2);
     const subcategory2 = new Set(allSubcategory2);
     const subcategory2Array = Array.from(subcategory2);
-    console.log(subcategory2Array);
 
     return subcategory2Array.map((subcategory2) => (
       <div
@@ -88,7 +83,10 @@ const NewBorn = () => {
 
   return (
     <NewBornPage>
-      <Sidebar back={!!newBornDisplay && setNewBornDisplay} />
+      <Sidebar
+        back={!!newBornDisplay && setNewBornDisplay}
+        windowDimension={windowDimension}
+      />
       <div className='contentSide'>
         {!newBornDisplay &&
           !newBornSelectedDisplaySubcategory2 &&

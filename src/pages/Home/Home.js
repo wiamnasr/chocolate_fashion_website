@@ -10,7 +10,6 @@ const Home = ({ windowDimension }) => {
   const [activeClassNameClicked, setActiveClassNameClicked] = useState(
     windowDimension.winWidth < 500 ? true : false
   );
-  console.log(activeClassNameClicked);
 
   return (
     <div className='Home'>

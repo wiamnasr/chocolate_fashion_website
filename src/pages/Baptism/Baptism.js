@@ -11,14 +11,13 @@ const BaptismSubcategoryImages = [
   { name: "Selena", url: "" },
 ];
 
-const Baptism = () => {
+const Baptism = ({ windowDimension }) => {
   const [baptismDisplay, setBaptismDisplay] = useState("");
 
   const subcategoryMapper = () => {
     const allSubcategory2 = BaptismData.map((photo) => photo.Subcategory2);
     const subcategory2 = new Set(allSubcategory2);
     const subcategory2Array = Array.from(subcategory2);
-    console.log(subcategory2Array);
 
     return subcategory2Array.map((subcategory2, index) => (
       <div
@@ -38,15 +37,12 @@ const Baptism = () => {
     const allDisplayPicsUrlsForSubcategory2 = BaptismData.filter(
       (imageItem) => imageItem.Subcategory2 === engagementDisplay
     ).map((photo) => photo.ImagePublicUrl);
-    console.log(allDisplayPicsUrlsForSubcategory2);
     const displayPicsUrlsForSubcategory2 = new Set(
       allDisplayPicsUrlsForSubcategory2
     );
-    console.log(displayPicsUrlsForSubcategory2);
     const displaPicsUrlsForSubcategory2Array = Array.from(
       displayPicsUrlsForSubcategory2
     );
-    console.log(displaPicsUrlsForSubcategory2Array);
 
     return displaPicsUrlsForSubcategory2Array.map((pictureUrl) => (
       <CategoryOptionsThumb
@@ -60,7 +56,10 @@ const Baptism = () => {
 
   return (
     <BaptismPage>
-      <Sidebar back={!!baptismDisplay && setBaptismDisplay} />
+      <Sidebar
+        back={!!baptismDisplay && setBaptismDisplay}
+        windowDimension={windowDimension}
+      />
 
       <div className='contentSide'>
         {!baptismDisplay && subcategoryMapper()}

@@ -20,36 +20,29 @@ const displaySources = {
 
 const SETjsonIMPORT = (subcategory, optionName) => {
   var jsonFileToImport = "starting";
-  // console.log(jsonFileToImport);
-  // console.log(typeof displaySources[subcategory]);
   if (typeof displaySources[subcategory] !== String) {
     jsonFileToImport = `${sourceUrl}/SpecialOccasions/${displaySources[
       "Special_Occasions"
     ]
       .filter((occasion) => occasion === optionName)[0]
       .replace("_", "")}ImagesData.json`;
-    // console.log(jsonFileToImport);
     return jsonFileToImport;
   } else {
-    console.log(displaySources[subcategory]);
     jsonFileToImport = `${sourceUrl}/${displaySources[subcategory].replace(
       "_",
       ""
     )}ImagesData.json`;
-    // console.log(jsonFileToImport);
     return jsonFileToImport;
   }
 };
 
 const DisplaysInCategoryOption = ({ setSelectedSubcategory2 }) => {
   const { subcategory, optionName } = useParams();
-  // console.log(subcategory);
 
   const jsonImportUrl = SETjsonIMPORT(subcategory, optionName);
-  console.log(jsonImportUrl);
   const jsonData = require(`${jsonImportUrl}`);
   const parsedJsonData = JSON.parse(jsonData);
-  console.log(parsedJsonData[0].Category);
+  
   return (
     <DisplaysInCategoryOptionPage>
       {parsedJsonData[0].Subcategory2 ? (

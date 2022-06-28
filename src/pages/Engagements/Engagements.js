@@ -12,7 +12,7 @@ const EngagementSubcategoryImages = [
   { name: "Ghina Bois-de-rose", url: "" },
 ];
 
-const Engagements = () => {
+const Engagements = ({ windowDimension }) => {
   const [engagementDisplay, setEngagementDisplay] = useState("");
 
   const subcategoryMapper = () => {
@@ -40,15 +40,12 @@ const Engagements = () => {
     const allDisplayPicsUrlsForSubcategory2 = EngagementsData.filter(
       (imageItem) => imageItem.Subcategory2 === engagementDisplay
     ).map((photo) => photo.ImagePublicUrl);
-    console.log(allDisplayPicsUrlsForSubcategory2);
     const displayPicsUrlsForSubcategory2 = new Set(
       allDisplayPicsUrlsForSubcategory2
     );
-    console.log(displayPicsUrlsForSubcategory2);
     const displaPicsUrlsForSubcategory2Array = Array.from(
       displayPicsUrlsForSubcategory2
     );
-    console.log(displaPicsUrlsForSubcategory2Array);
 
     return displaPicsUrlsForSubcategory2Array.map((pictureUrl) => (
       <CategoryOptionsThumb
@@ -63,7 +60,10 @@ const Engagements = () => {
   return (
     <EngagementPage>
       <div className='contentSide'>
-        <Sidebar back={!!engagementDisplay && setEngagementDisplay} />
+        <Sidebar
+          back={!!engagementDisplay && setEngagementDisplay}
+          windowDimension={windowDimension}
+        />
         {!engagementDisplay && subcategoryMapper()}
 
         {!!engagementDisplay && subcategory2Mapper(engagementDisplay)}

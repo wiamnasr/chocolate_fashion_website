@@ -12,15 +12,13 @@ const CommunionSubcategoryImages = [
   { name: "Rhea", url: "" },
 ];
 
-const Communion = () => {
+const Communion = ({ windowDimension }) => {
   const [communionDisplay, setCommunionDisplay] = useState("");
 
   const subcategoryMapper = () => {
     const allSubcategory2 = CommunionData.map((photo) => photo.Subcategory2);
     const subcategory2 = new Set(allSubcategory2);
     const subcategory2Array = Array.from(subcategory2);
-    console.log("communion");
-    console.log(subcategory2Array);
 
     return subcategory2Array.map((subcategory2, index) => (
       <div
@@ -42,16 +40,12 @@ const Communion = () => {
     const allDisplayPicsUrlsForSubcategory2 = CommunionData.filter(
       (imageItem) => imageItem.Subcategory2 === engagementDisplay
     ).map((photo) => photo.ImagePublicUrl);
-    console.log(allDisplayPicsUrlsForSubcategory2);
     const displayPicsUrlsForSubcategory2 = new Set(
       allDisplayPicsUrlsForSubcategory2
     );
-    console.log(displayPicsUrlsForSubcategory2);
     const displaPicsUrlsForSubcategory2Array = Array.from(
       displayPicsUrlsForSubcategory2
     );
-    console.log(displaPicsUrlsForSubcategory2Array);
-
     return displaPicsUrlsForSubcategory2Array.map((pictureUrl) => (
       <CategoryOptionsThumb
         // description={engagementDisplay}
@@ -64,7 +58,10 @@ const Communion = () => {
 
   return (
     <CommunionPage>
-      <Sidebar back={!!communionDisplay && setCommunionDisplay} />
+      <Sidebar
+        back={!!communionDisplay && setCommunionDisplay}
+        windowDimension={windowDimension}
+      />
       <div className='contentSide'>
         {!communionDisplay && subcategoryMapper()}
 

@@ -18,16 +18,13 @@ const WeddingsSubcategoryImages = [
   { name: "with love", url: "" },
 ];
 
-const Weddings = () => {
+const Weddings = ({ windowDimension }) => {
   const [weddingDisplay, setWeddingDisplay] = useState("");
-  console.log(weddingDisplay);
 
   const subcategoryMapper = () => {
     const allSubcategory2 = WeddingsData.map((photo) => photo.Subcategory2);
     const subcategory2 = new Set(allSubcategory2);
     const subcategory2Array = Array.from(subcategory2);
-
-    // console.log(subcategory2Array);
 
     return subcategory2Array.map((subcategory2, index) => (
       <div
@@ -47,15 +44,12 @@ const Weddings = () => {
     const allDisplayPicsUrlsForSubcategory2 = WeddingsData.filter(
       (imageItem) => imageItem.Subcategory2 === weddingDisplay
     ).map((photo) => photo.ImagePublicUrl);
-    // console.log(allDisplayPicsUrlsForSubcategory2);
     const displayPicsUrlsForSubcategory2 = new Set(
       allDisplayPicsUrlsForSubcategory2
     );
-    // console.log(displayPicsUrlsForSubcategory2);
     const displaPicsUrlsForSubcategory2Array = Array.from(
       displayPicsUrlsForSubcategory2
     );
-    // console.log(displaPicsUrlsForSubcategory2Array);
 
     return displaPicsUrlsForSubcategory2Array.map((pictureUrl) => (
       <CategoryOptionsThumb
@@ -69,7 +63,10 @@ const Weddings = () => {
 
   return (
     <WeddingsPage>
-      <Sidebar back={!!weddingDisplay && setWeddingDisplay} />
+      <Sidebar
+        back={!!weddingDisplay && setWeddingDisplay}
+        windowDimension={windowDimension}
+      />
       <div className='contentSide'>
         {!weddingDisplay && subcategoryMapper()}
 

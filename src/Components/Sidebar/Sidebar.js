@@ -22,16 +22,15 @@ const Sidebar = ({
   activeClassNameClicked,
   windowDimension,
 }) => {
-  // console.log(activeClassNameClicked);
+  const sidebarClickHandler = () =>
+    setActiveClassNameClicked(!activeClassNameClicked);
 
-  const sidebarClickHandler = async () => {
-    await setActiveClassNameClicked(!activeClassNameClicked);
-  };
+  const isToggled = windowDimension.winWidth < 500 ? true : false;
 
   return (
     <div className='sidebar'>
       <CDBSidebar
-        toggled={windowDimension.winWidth < 500 ? true : false}
+        toggled={isToggled}
         textColor='rgb(200, 171, 100)'
         backgroundColor='rgba(255, 255, 255, 0.849)'
         breakpoint={800}

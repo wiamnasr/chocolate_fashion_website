@@ -37,10 +37,11 @@ const Categories = ({
   setSelectedCategory,
   contactUsShowModal,
   setContactUsShowModal,
+  windowDimension,
 }) => {
   return (
     <CategoriesPage>
-      <Sidebar />
+      <Sidebar windowDimension={windowDimension} />
       <CategoriesList>
         {WebsiteCategories.map((category) => (
           <li

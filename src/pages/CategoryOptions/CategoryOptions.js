@@ -155,15 +155,13 @@ const WebsiteCategoryOptions = {
   Souvenirs: [],
 };
 
-const CategoryOptions = ({ setSelectedSubcategory }) => {
+const CategoryOptions = ({ setSelectedSubcategory, windowDimension }) => {
   const { subcategory } = useParams();
   if (subcategory !== "Souvenirs") {
-    console.log(subcategory);
     const CategoryOptionsToMap = WebsiteCategoryOptions[subcategory];
-    // console.log(CategoryOptionsToMap);
     return (
       <CategoryOptionsList>
-        <Sidebar />
+        <Sidebar windowDimension={windowDimension} />
         {CategoryOptionsToMap.map((categoryOption) => (
           <li
             key={categoryOption.key}

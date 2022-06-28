@@ -40,34 +40,42 @@ function App() {
         <Route path='/' element={<Home windowDimension={windowDimension} />} />
         <Route
           path='/categories'
-          element={<Categories setSelectedCategory={setSelectedCategory} />}
+          element={
+            <Categories
+              setSelectedCategory={setSelectedCategory}
+              windowDimension={windowDimension}
+            />
+          }
         />
         <Route
           path='/Categories/Special_Occasions/Engagements'
-          element={<Engagements />}
+          element={<Engagements windowDimension={windowDimension} />}
         />
         <Route
           path='/Categories/Special_Occasions/Weddings'
-          element={<Weddings />}
+          element={<Weddings windowDimension={windowDimension} />}
         />
         <Route
           path='/Categories/Special_Occasions/Baptism'
-          element={<Baptism />}
+          element={<Baptism windowDimension={windowDimension} />}
         />
         <Route
           path='/Categories/Special_Occasions/Communion'
-          element={<Communion />}
+          element={<Communion windowDimension={windowDimension} />}
         />
         <Route
           path='/Categories/Special_Occasions/New_Born'
-          element={<NewBorn />}
+          element={<NewBorn windowDimension={windowDimension} />}
         />
-        <Route path='/Categories/Gift_Giving' element={<GiftGiving />} />
+        <Route
+          path='/Categories/Gift_Giving'
+          element={<GiftGiving windowDimension={windowDimension} />}
+        />
         <Route
           path='/Categories/Special_Occasions'
-          element={<SpecialOccasions />}
+          element={<SpecialOccasions windowDimension={windowDimension} />}
         />
-        <Route path='/*' element={<Home />} />
+        <Route path='/*' element={<Home windowDimension={windowDimension} />} />
       </Routes>
     </Router>
   );
