@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
@@ -13,39 +12,21 @@ import {
 
 import { NavLink } from "react-router-dom";
 
-import ContactUsButton from "../ContactUsButton/ContactUsButton";
+// import ContactUsButton from "../ContactUsButton/ContactUsButton";
 
-const Sidebar = ({ setContactUsShowModal, contactUsShowModal, back }) => {
-  const [activeClassNameClicked, setActiveClassNameClicked] = useState(true);
+const Sidebar = ({
+  setContactUsShowModal,
+  contactUsShowModal,
+  back,
+  setActiveClassNameClicked,
+  activeClassNameClicked,
+  windowDimension,
+}) => {
   // console.log(activeClassNameClicked);
 
-  const sidebarClickHandler = () =>
-    setActiveClassNameClicked(!activeClassNameClicked);
-
-  const contactUsClickHandler = (e) => {
-    e.preventDefault();
-    setContactUsShowModal(!contactUsShowModal);
+  const sidebarClickHandler = async () => {
+    await setActiveClassNameClicked(!activeClassNameClicked);
   };
-
-  const [windowDimension, detectHW] = useState({
-    winWidth: window.innerWidth,
-    winHeight: window.innerHeight,
-  });
-
-  const detectSize = () => {
-    detectHW({
-      winWidth: window.innerWidth,
-      winHeight: window.innerHeight,
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", detectSize);
-
-    return () => {
-      window.removeEventListener("resize", detectSize);
-    };
-  }, [windowDimension]);
 
   return (
     <div className='sidebar'>

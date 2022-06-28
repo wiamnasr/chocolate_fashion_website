@@ -1,10 +1,10 @@
 .sidebar {
   position: fixed;
-  top:  - 150px;
+  top:  0;
   left: 0;
   display: flex;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  /* overflow-y: scroll; */
 }
 
 .cdbSidebar {
@@ -31,7 +31,7 @@
 .CFS_LOGO_NAVBAR_FOOTER {
   width: 100%;
   background: rgba(255, 255, 255, 0.849);
-  height: 12.5vh;
+  /* height: 4.5vh; */
   margin: 0;
   border-style: none;
 }
