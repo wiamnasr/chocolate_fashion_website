@@ -14,7 +14,7 @@ const Home = ({ windowDimension }) => {
 
   return (
     <div className='Home'>
-      <div className='homePageSidebarSection'>
+      <div className={'homePageSidebarSection'}>
         <Sidebar
           setContactUsShowModal={setContactUsShowModal}
           contactUsShowModal={contactUsShowModal}

@@ -4,7 +4,7 @@
   left: 0;
   display: flex;
   height: 100vh;
-  /* overflow-y: scroll; */
+  overflow-y: none;
 }
 
 .cdbSidebar {
