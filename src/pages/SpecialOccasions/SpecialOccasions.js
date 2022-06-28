@@ -11,11 +11,26 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import React, { useState } from "react";
 
 const SpecialOccasionsCategoryImages = [
-  { name: "Baptism", url: "" },
-  { name: "Communion", url: "" },
-  { name: "New Born", url: "" },
-  { name: "Weddings", url: "" },
-  { name: "Engagements", url: "" },
+  {
+    name: "Baptism",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons%2FSpecial_Occasions%2FBaptism.jpg",
+  },
+  {
+    name: "Communion",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons%2FSpecial_Occasions%2Fcommunion.jpg",
+  },
+  {
+    name: "New Born",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons%2FSpecial_Occasions%2FnewBorn.jpg",
+  },
+  {
+    name: "Weddings",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons%2FSpecial_Occasions%2Fweddings.jpg",
+  },
+  {
+    name: "Engagements",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons%2FSpecial_Occasions%2Fengagements.jpg",
+  },
 ];
 
 const SpecialOccasions = ({ windowDimension }) => {
