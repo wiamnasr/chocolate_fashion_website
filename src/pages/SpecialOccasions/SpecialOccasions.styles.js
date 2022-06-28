@@ -12,7 +12,6 @@ export const SpecialOccasionsPage = styled.div`
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    // background-color: red;
     height: 100%;
     margin: 10% 0 0 20%;
   }
