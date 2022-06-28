@@ -15,6 +15,7 @@ const CategoryOptionsThumb = ({
         to={`/Categories/${subcategory}/${
           optionName ? optionName.replace(" ", "_") : ""
         }${nameOfTheDisplay ? "/" + nameOfTheDisplay : ""}`}
+        className="subcategoryLink"
       >
         <Image src={optionImageUrl} alt={description} />
         <h3>{description}</h3>

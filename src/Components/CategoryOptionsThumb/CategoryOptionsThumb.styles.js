@@ -13,10 +13,13 @@ export const Wrapper = styled.div`
   flex-flow: row wrap;
   justify-content: center;
 
+  .subcategoryLink {
+    text-decoration: none;
+  }
+
   h3 {
     margin: 10px 0 0 0;
     color: #c8ab64;
-    text-decoration: none;
   }
 
   p {
