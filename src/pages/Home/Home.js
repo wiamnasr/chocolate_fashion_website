@@ -7,13 +7,11 @@ import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
 const Home = ({ windowDimension }) => {
   const [contactUsShowModal, setContactUsShowModal] = useState(false);
-  const [activeClassNameClicked, setActiveClassNameClicked] = useState(
-    windowDimension.winWidth < 500 ? true : false
-  );
+  const [activeClassNameClicked, setActiveClassNameClicked] = useState(true);
 
   return (
     <div className='Home'>
-      <div className={'homePageSidebarSection'}>
+      <div className={"homePageSidebarSection"}>
         <Sidebar
           setContactUsShowModal={setContactUsShowModal}
           contactUsShowModal={contactUsShowModal}

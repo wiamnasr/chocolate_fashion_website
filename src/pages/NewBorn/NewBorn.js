@@ -5,8 +5,14 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import React, { useState } from "react";
 
 const NewBornSubcategoryImages = [
-  { name: "Baby Boy", url: "" },
-  { name: "Baby Girl", url: "" },
+  {
+    name: "Baby Boy",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/New_Born%2FBaby%20Boy%2FMon%20manege%20a%20moi%2F20141205_102117.jpg",
+  },
+  {
+    name: "Baby Girl",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/New_Born%2FBaby%20Girl%2FOrchid%2FIMG_4967.JPG",
+  },
 ];
 
 const NewBorn = ({ windowDimension }) => {
@@ -87,7 +93,13 @@ const NewBorn = ({ windowDimension }) => {
         back={!!newBornDisplay && setNewBornDisplay}
         windowDimension={windowDimension}
       />
-      <div className='contentSide'>
+      <div
+        className={
+          !newBornDisplay && !newBornSelectedDisplaySubcategory2
+            ? "subcategorySide"
+            : "contentSide"
+        }
+      >
         {!newBornDisplay &&
           !newBornSelectedDisplaySubcategory2 &&
           subcategoryMapper()}
