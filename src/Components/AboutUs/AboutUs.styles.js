@@ -59,7 +59,7 @@ export const AboutUsScroller = styled.div`
     background: rgba(255, 255, 255, 0.616);
     color: #c8ab64;
     word-spacing: 0.5rem;
-    margin: 2rem 10vw 0 0;
+    margin: 1rem 10vw 0 0;
     padding-top: 5%;
     font-size: 1.3rem;
   }
@@ -76,7 +76,7 @@ export const AboutUsScroller = styled.div`
       background: rgba(255, 255, 255, 0.616);
       color: #c8ab64;
       word-spacing: 0.5rem;
-      margin: 5rem 10vw 0 0;
+      margin: 2rem 10vw 0 0;
       padding-top: 5%;
       font-size: 1.5rem;
     }
@@ -93,7 +93,7 @@ export const AboutUsScroller = styled.div`
       background: rgba(255, 255, 255, 0.616);
       color: #c8ab64;
       word-spacing: 0.5rem;
-      margin: 4rem 10vw 0 0;
+      margin: 3rem 10vw 0 0;
       padding-top: 5%;
       font-size: 1.8rem;
     }
@@ -106,7 +106,7 @@ export const AboutUsScroller = styled.div`
       background: rgba(255, 255, 255, 0.616);
       color: #c8ab64;
       word-spacing: 0.5rem;
-      margin: 5rem 10vw 0 0;
+      margin: 4rem 10vw 0 0;
       padding-top: 5%;
     }
   }
