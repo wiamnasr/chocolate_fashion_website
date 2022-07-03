@@ -6,6 +6,7 @@ export const SpecialOccasionsPage = styled.div`
   display: flex;
   flex-flow: wrap;
   justify-content: flex-end;
+  font-family: Great Vibes;
 
   .contentSide {
     display: flex;

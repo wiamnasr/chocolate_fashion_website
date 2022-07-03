@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const EngagementPage = styled.div`
-width: 100%;
+  width: 100%;
   .contentSide {
     margin: 0 0 0 20%;
     display: flex;
@@ -10,5 +10,6 @@ width: 100%;
     max-width: 100%;
     // background-color: red;
     height: 100%;
+    font-family: Great Vibes;
   }
 `;

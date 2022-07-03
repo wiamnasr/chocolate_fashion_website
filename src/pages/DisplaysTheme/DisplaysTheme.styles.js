@@ -5,4 +5,5 @@ export const DisplaysThemePage = styled.div`
   height: 100%;
   display: flex;
   flex-flow: row wrap;
+  font-family: Great Vibes;
 `;

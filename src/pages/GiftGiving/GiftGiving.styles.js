@@ -6,6 +6,7 @@ export const GiftGivingPage = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  font-family: Great Vibes;
 
   .contentSide {
     display: flex;

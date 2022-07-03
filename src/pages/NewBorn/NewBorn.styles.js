@@ -6,6 +6,7 @@ export const NewBornPage = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
+  font-family: Great Vibes;
 
   .subcategorySide {
     display: flex;

@@ -6,6 +6,7 @@ export const BaptismPage = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  font-family: Great Vibes;
 
   .contentSide {
     display: flex;
@@ -15,6 +16,5 @@ export const BaptismPage = styled.div`
     // background-color: red;
     height: 100%;
     margin: 10% 0 0 20%;
-
   }
 `;

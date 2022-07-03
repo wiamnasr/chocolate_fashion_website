@@ -5,6 +5,5 @@ export const DisplaysInCategoryOptionPage = styled.div`
   height: 100%;
   display: flex;
   flex-flow: wrap;
-
-  
+  font-family: Great Vibes;
 `;
