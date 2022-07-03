@@ -63,28 +63,22 @@ const AboutUs = ({ windowDimension }) => {
           <AboutUsScroller>
             <StyleRoot>
               <div style={styles.flipInX} className='aboutUsSection'>
-                <h2 className='aboutUsTextContent'>
+                <h2 className='founderMessage'>
                   Having relocated from Lebanon to the UK in 2020, I have
                   brought with me a renewed vision for a future in which
                   Chocolate Fashion Signature can reclaim its former glory,
-                  going above and beyond anything delivered before in this
-                  country. I have spent over a decade learning about and
-                  developing this totally unique market.
+                  <br />
                 </h2>
+
                 <div className='homepageSlideShowDisplay'>
                   <HomePageSlideShow />
                 </div>
-                <h2 className='aboutUsTextContent'>
-                  Love for chocolate is universal, and I recognised that it can
-                  be used to create a magical moment for extraordinary clients
-                  that will be remembered forever. After all, what's life if it
-                  doesn't have those perfect times of beauty, taste, and
-                  elegance. Chocolate Fashion Signature's purpose is to
-                  re-invent the love for chocolates, wrapping them individually
-                  with the finest, artistic, and tailored finishing to create
-                  and deliver a great tasting experience.
-                  <br />
-                  &emsp;&emsp;Fady Al Sabbagh, Founder{" "}
+
+                <h2 className='founderMessageToo'>
+                  going above and beyond anything delivered before in this
+                  country. I have spent over a decade learning about and
+                  developing this totally unique market.
+                  <br /> &emsp;&emsp;Fady Al Sabbagh, Founder
                   <img
                     src={CFS_LOGO_TRANSPARENT}
                     alt='Chocolate Fashion Signature Logo'
@@ -96,7 +90,7 @@ const AboutUs = ({ windowDimension }) => {
           </AboutUsScroller>
         </Animator>
       </ScrollPage>
-      <ScrollPage page={2}>
+      {/* <ScrollPage page={2}>
         <Animator animation={batch(Fade())}>
           <AboutUsScroller>
             <StyleRoot>
@@ -112,11 +106,21 @@ const AboutUs = ({ windowDimension }) => {
                   suppliers, from raw chocolate material to the finest of
                   finishings. Most of all, our creations are wrapped with love.
                 </h2>
+                <h2 className='aboutUsTextContent'>
+                  Love for chocolate is universal, and I recognised that it can
+                  be used to create a magical moment for extraordinary clients
+                  that will be remembered forever. After all, what's life if it
+                  doesn't have those perfect times of beauty, taste, and
+                  elegance. Chocolate Fashion Signature's purpose is to
+                  re-invent the love for chocolates, wrapping them individually
+                  with the finest, artistic, and tailored finishing to create
+                  and deliver a great tasting experience.
+                </h2>
               </div>
             </StyleRoot>
           </AboutUsScroller>
         </Animator>
-      </ScrollPage>
+      </ScrollPage> */}
     </ScrollContainer>
   );
 };

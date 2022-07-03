@@ -19,11 +19,7 @@ const HomePageSlideShowMedia = [
 const HomePageSlideShow = () => {
   const [autoplay, setAutoplay] = useState(true);
 
-  const style = {
-    textAlign: "center",
-    // background: "teal",
-    fontSize: "30px",
-  };
+  
 
   return (
     <div className='mainPageSlideshow'>
@@ -31,7 +27,7 @@ const HomePageSlideShow = () => {
         {/* <Slide autoplay={autoplay}> */}
         <Slide autoplay={true}>
           {HomePageSlideShowMedia.map((image, index) => (
-            <div style={style} key={image}>
+            <div key={image}>
               <img
                 src={image}
                 alt='sample chocolate display by Chocolate Fashion Signature'

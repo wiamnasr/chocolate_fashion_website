@@ -1,16 +1,35 @@
 .mainPageSlideshow {
-  width: 80vw;
+  width: 87vw;
   height: 20vh;
-  
+  margin-left: 20vw;
 
+  /* color:rgba(255, 255, 255, 0.705) */
 }
-
 
 .mainPageSlidShowImage {
-
   /* width: auto;
   height: auto; */
-  width: 60vw;
-  height: 40vh;
-
+  width: 87vw;
+  height: 35vh;
 }
+
+@media screen and (min-width: 875px) {
+  .mainPageSlidShowImage {
+    height: 45vh;
+  }
+}
+
+
+ @media screen and (min-width: 1000px) {
+  .mainPageSlidShowImage {
+    height: 50vh;
+    width: 85vw;
+  }
+ }
+
+ @media screen and (min-width: 1300px) {
+  .mainPageSlidShowImage {
+    height: 55vh;
+  }
+
+ }
