@@ -12,17 +12,17 @@ import {
   Move,
 } from "react-scroll-motion";
 
-import CFS_LOGO_BACKGROUND from "../../Resources/png/HomePageIcon.jpg";
-import CFS_LOGO_BACKGROUND_MOBILE from "../../Resources/png/mobileBackground.jpg";
+// import CFS_LOGO_BACKGROUND from "../../Resources/png/HomePageIcon.jpg";
+// import CFS_LOGO_BACKGROUND_MOBILE from "../../Resources/png/mobileBackground.jpg";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
 const styles = {
   bounce: {
-    animation: "x 10s",
+    animation: "2 3s",
     animationName: Radium.keyframes(bounce, "bounce"),
   },
   flipInX: {
-    animation: "20 4s",
+    animation: "1 5s",
     animationName: Radium.keyframes(flipInX, "flipInX"),
   },
 };
@@ -37,8 +37,8 @@ const AboutUs = ({ windowDimension }) => {
             <img
               src={
                 windowDimension.winWidth < 1300
-                  ? CFS_LOGO_BACKGROUND_MOBILE
-                  : CFS_LOGO_BACKGROUND
+                  ? "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/mobileBackground.jpg"
+                  : "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/HomePageIcon.jpg"
               }
               alt='Chocolate Fashion Logo, Transparent'
               className={
@@ -61,7 +61,7 @@ const AboutUs = ({ windowDimension }) => {
         <Animator animation={batch(Fade())}>
           <AboutUsScroller>
             <StyleRoot>
-              <div style={styles.flipInX} className='aboutUsTextSection'>
+              <div style={styles.flipInX} className='aboutUsSection'>
                 <h2 className='aboutUsTextContent'>
                   Having relocated from Lebanon to the UK in 2020, I have
                   brought with me a renewed vision for a future in which
@@ -69,6 +69,14 @@ const AboutUs = ({ windowDimension }) => {
                   going above and beyond anything delivered before in this
                   country. I have spent over a decade learning about and
                   developing this totally unique market.
+                  <br />
+                  <br />
+                  &emsp;&emsp;Fady Al Sabbagh, Founder{" "}
+                  <img
+                    src={CFS_LOGO_TRANSPARENT}
+                    alt='Chocolate Fashion Signature Logo'
+                    className="introLogoImage"
+                  />
                 </h2>
               </div>
             </StyleRoot>
