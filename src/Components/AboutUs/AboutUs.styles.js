@@ -46,7 +46,7 @@ export const AboutUsScroller = styled.div`
 
   .aboutUsSection {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -61,53 +61,39 @@ export const AboutUsScroller = styled.div`
     word-spacing: 0.5rem;
     margin: 1rem 10vw 0 0;
     padding-top: 5%;
-    font-size: 1.3rem;
+    font-size: .8rem;
   }
 
+  .homepageSlideShowDisplay {
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+
+  }
+  
   .introLogoImage {
-    width: 7rem;
-    height: 7rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   @media screen and (min-width: 570px) {
     .aboutUsTextContent {
-      width: 70vw;
-      height: auto;
-      background: rgba(255, 255, 255, 0.616);
-      color: #c8ab64;
-      word-spacing: 0.5rem;
-      margin: 2rem 10vw 0 0;
-      padding-top: 5%;
-      font-size: 1.5rem;
-    }
-
-    .introLogoImage {
-      width: 7rem;
-      height: 7rem;
+      margin: 1rem 8vw 0 0;
+      padding-top: 0.5rem;
     }
   }
 
   @media screen and (min-width: 875px) {
     .aboutUsTextContent {
-      height: auto;
-      background: rgba(255, 255, 255, 0.616);
-      color: #c8ab64;
-      word-spacing: 0.5rem;
-      margin: 3rem 10vw 0 0;
-      padding-top: 5%;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 
   @media screen and (min-width: 1300px) {
     .aboutUsTextContent {
-      width: 70vw;
-      height: auto;
-      background: rgba(255, 255, 255, 0.616);
-      color: #c8ab64;
-      word-spacing: 0.5rem;
-      margin: 4rem 10vw 0 0;
-      padding-top: 5%;
+      font-size: 1.6rem;
     }
   }
 `;

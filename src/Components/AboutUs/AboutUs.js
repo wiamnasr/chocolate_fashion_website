@@ -15,6 +15,7 @@ import {
 // import CFS_LOGO_BACKGROUND from "../../Resources/png/HomePageIcon.jpg";
 // import CFS_LOGO_BACKGROUND_MOBILE from "../../Resources/png/mobileBackground.jpg";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
+import HomePageSlideShow from "../HomePageSlideShow/HomePageSlideShow";
 
 const styles = {
   bounce: {
@@ -69,14 +70,47 @@ const AboutUs = ({ windowDimension }) => {
                   going above and beyond anything delivered before in this
                   country. I have spent over a decade learning about and
                   developing this totally unique market.
-                  <br />
+                </h2>
+                <div className='homepageSlideShowDisplay'>
+                  <HomePageSlideShow />
+                </div>
+                <h2 className='aboutUsTextContent'>
+                  Love for chocolate is universal, and I recognised that it can
+                  be used to create a magical moment for extraordinary clients
+                  that will be remembered forever. After all, what's life if it
+                  doesn't have those perfect times of beauty, taste, and
+                  elegance. Chocolate Fashion Signature's purpose is to
+                  re-invent the love for chocolates, wrapping them individually
+                  with the finest, artistic, and tailored finishing to create
+                  and deliver a great tasting experience.
                   <br />
                   &emsp;&emsp;Fady Al Sabbagh, Founder{" "}
                   <img
                     src={CFS_LOGO_TRANSPARENT}
                     alt='Chocolate Fashion Signature Logo'
-                    className="introLogoImage"
+                    className='introLogoImage'
                   />
+                </h2>
+              </div>
+            </StyleRoot>
+          </AboutUsScroller>
+        </Animator>
+      </ScrollPage>
+      <ScrollPage page={2}>
+        <Animator animation={batch(Fade())}>
+          <AboutUsScroller>
+            <StyleRoot>
+              <div style={styles.flipInX} className='aboutUsSection'>
+                <h2 className='aboutUsTextContent'>
+                  Chocolate Fashion Signature loves planet earth and our mission
+                  is to create a way for chocolate consumption to be
+                  sustainable. The mainstream chocolate industry is contributing
+                  to the increase in forests' shrinkage rate and ultimately
+                  global warming. We, therefore, aim to make sure that our
+                  process is green, guilt-free, and most importantly, one of a
+                  kind, through collaboration with like-minded high-end
+                  suppliers, from raw chocolate material to the finest of
+                  finishings. Most of all, our creations are wrapped with love.
                 </h2>
               </div>
             </StyleRoot>
