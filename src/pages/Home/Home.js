@@ -30,11 +30,7 @@ const Home = ({ windowDimension }) => {
         <img
           src={CFS_LOGO_TRANSPARENT}
           alt='Chocolate Fashion Logo, Transparent'
-          className={
-            !activeClassNameClicked && windowDimension.winWidth < 500
-              ? "CFS_LOGO_SENDBACK"
-              : "CFS_LOGO"
-          }
+          className={"CFS_LOGO"}
         ></img>
 
         {/* <div className='HomePageSlideShow'>
