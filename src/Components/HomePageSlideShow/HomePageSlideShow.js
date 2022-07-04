@@ -16,8 +16,10 @@ const HomePageSlideShowMedia = [
   "https://storage.googleapis.com/chocolatefashionsignature.com/New_Born%2FBaby%20Girl%2FOrchid%2FIMG_4967.JPG",
 ];
 
-const HomePageSlideShow = ({ windowDimension }) => {
+const HomePageSlideShow = () => {
   const [autoplay, setAutoplay] = useState(true);
+
+  
 
   return (
     <div className='mainPageSlideshow'>
@@ -29,11 +31,7 @@ const HomePageSlideShow = ({ windowDimension }) => {
               <img
                 src={image}
                 alt='sample chocolate display by Chocolate Fashion Signature'
-                className={
-                  windowDimension.winHeight < 600
-                    ? "mainPageSlidShowImageRotated"
-                    : "mainPageSlidShowImage"
-                }
+                className='mainPageSlidShowImage'
               />
               {/* Slide {index + 1} */}
             </div>

@@ -10,12 +10,7 @@
   /* width: auto;
   height: auto; */
   width: 87vw;
-  height: 30vh;
-}
-
-.mainPageSlidShowImageRotated {
-  width: 57vw;
-  height: 30vh;
+  height: 35vh;
 }
 
 @media screen and (min-width: 875px) {
@@ -28,7 +23,7 @@
  @media screen and (min-width: 1000px) {
   .mainPageSlidShowImage {
     height: 50vh;
-    width: 87vw;
+    width: 85vw;
   }
  }
 

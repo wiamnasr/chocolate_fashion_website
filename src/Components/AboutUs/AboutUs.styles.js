@@ -60,38 +60,16 @@ export const AboutUsScroller = styled.div`
     color: #c8ab64;
     word-spacing: 0.6rem;
     margin: 0.5rem 1vw 0 0;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    line-height: 1.4rem;
-  }
-
-  .founderMessageRotated {
-    width: 87vw;
-    height: 28vh;
-    background: rgba(255, 255, 255, 0.705);
-    color: #c8ab64;
-    word-spacing: 0.6rem;
-    margin: 0.5rem 1vw 0 0;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    line-height: 1.4rem;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    line-height: 1.6rem;
   }
 
   .homepageSlideShowDisplay {
     width: 87vw;
-    height: 30vh;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 1vw;
-  }
-
-  .homepageSlideShowDisplayRotated {
-    width: 57vw;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     justify-content: flex-end;
     margin-right: 1vw;
@@ -104,25 +82,11 @@ export const AboutUsScroller = styled.div`
     color: #c8ab64;
     word-spacing: 0.6rem;
     margin: 0.5rem 1vw 0 0;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    line-height: 1.4rem;
-  }
-
-  .founderMessageTooRotated {
-    width: 87vw;
-    height: 35vh;
-    background: rgba(255, 255, 255, 0.705);
-    color: #c8ab64;
-    word-spacing: 0.6rem;
-    margin: 0.5rem 1vw 0 0;
-    padding: 0rem 0.5rem 0.5rem 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    line-height: 1.3rem;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    line-height: 1.6rem;
   }
 
   .introLogoImage {
