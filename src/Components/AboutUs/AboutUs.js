@@ -63,18 +63,36 @@ const AboutUs = ({ windowDimension }) => {
           <AboutUsScroller>
             <StyleRoot>
               <div style={styles.flipInX} className='aboutUsSection'>
-                <h2 className='founderMessage'>
+                <h2
+                  className={
+                    windowDimension.winHeight < 700
+                      ? "founderMessageRotated"
+                      : "founderMessage"
+                  }
+                >
                   Having relocated from Lebanon to the UK in 2020, I have
                   brought with me a renewed vision for a future in which
                   Chocolate Fashion Signature can reclaim its former glory,
                   <br />
                 </h2>
 
-                <div className='homepageSlideShowDisplay'>
-                  <HomePageSlideShow />
+                <div
+                  className={
+                    windowDimension.winHeight < 700
+                      ? "homepageSlideShowDisplayRotated"
+                      : "'homepageSlideShowDisplay'"
+                  }
+                >
+                  <HomePageSlideShow windowDimension={windowDimension} />
                 </div>
 
-                <h2 className='founderMessageToo'>
+                <h2
+                  className={
+                    windowDimension.winHeight < 700
+                      ? "founderMessageTooRotated"
+                      : "founderMessageToo"
+                  }
+                >
                   going above and beyond anything delivered before in this
                   country. I have spent over a decade learning about and
                   developing this totally unique market.

@@ -32,7 +32,7 @@ const Sidebar = ({
       <CDBSidebar
         toggled={isToggled}
         textColor='rgb(200, 171, 100)'
-        backgroundColor='rgba(255, 255, 255, 0.849)'
+        backgroundColor='transparent'
         breakpoint={800}
         minWidth={
           windowDimension.winWidth < 500
@@ -55,11 +55,12 @@ const Sidebar = ({
         <CDBSidebarHeader
           prefix={<i className='fa fa-bars fa-large'></i>}
           onClick={sidebarClickHandler}
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.449)" }}
         >
-          <div
+          {/* <div
             className='container'
             style={{ display: "flex", alignItems: "center" }}
-          ></div>
+          ></div> */}
           {/* <ContactUsButton contactUsClickHandler={contactUsClickHandler} /> */}
           {!!back && (
             <h2
@@ -79,7 +80,13 @@ const Sidebar = ({
         <CDBSidebarContent className='sidebar-content'>
           <CDBSidebarMenu>
             <NavLink exact to='/'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Home
               </CDBSidebarMenuItem>
             </NavLink>
@@ -89,42 +96,84 @@ const Sidebar = ({
               </CDBSidebarMenuItem>
             </NavLink> */}
             <NavLink exact to='/Categories/Special_Occasions'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Special Occasions
               </CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to='/Categories/Special_Occasions/Engagements'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Engagements
               </CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to='/Categories/Special_Occasions/Weddings'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Weddings
               </CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to='/Categories/Special_Occasions/Baptism'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Baptism
               </CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to='/Categories/Special_Occasions/Communion'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Communion
               </CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to='/Categories/Special_Occasions/New_Born'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 New Born
               </CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to='/Categories/Gift_Giving'>
-              <CDBSidebarMenuItem className='activeClicked'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
                 Gift Giving
               </CDBSidebarMenuItem>
             </NavLink>
@@ -146,6 +195,7 @@ const Sidebar = ({
                   ? "CFS_LOGO_NAVBAR_FOOTER"
                   : "CFS_LOGO_NAVBAR_FOOTER_Minimized"
               }
+              id={windowDimension.winHeight < 500 && "cfs_logo_navbar_rotated"}
             ></img>
           </div>
         </CDBSidebarFooter>

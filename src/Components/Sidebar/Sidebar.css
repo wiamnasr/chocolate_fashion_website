@@ -4,22 +4,25 @@
   left: 0;
   display: flex;
   height: 100vh;
-  
-}
-
-.cdbSidebar {
-  max-height: 100%;
-  
 }
 
 .sidebar-content {
   /* text-align: center; */
   margin: 1rem;
-  
+  overflow-y: scroll;
+  height: 90vh;
+}
+
+.activeClicked-rotated {
+  font-size: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .activeClicked {
-  background-color: rgba(255, 255, 255, 0.849);
+  background-color: white;
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -28,23 +31,32 @@
 }
 
 .activeClicked:hover {
-  background-color: #f9f9fa3f;
+  background-color: rgba(255, 255, 255, 0.849);
   font-weight: bold;
   transition: ease-in;
 }
 
+#cfs_logo_navbar_rotated {
+  width: 100%;
+  background: white;
+  height: 50px;
+  margin: 0;
+  border-style: none;
+  
+}
+
 .CFS_LOGO_NAVBAR_FOOTER {
   width: 100%;
-  background: transparent;
-  height: 200px;
+  background: white;
+  height: 150px;
   margin: 0;
   border-style: none;
 }
 
 .CFS_LOGO_NAVBAR_FOOTER_Minimized {
   width: 100%;
-  background: transparent;
-  height: 200px;
+  background: white;
+  height: 100px;
   margin: 0;
   border-style: none;
 }

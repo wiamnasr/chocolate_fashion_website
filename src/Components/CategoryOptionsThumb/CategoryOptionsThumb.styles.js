@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
 
   h3 {
     color: #c8ab64;
+    margin-top: .4rem;
   }
 
   p {
