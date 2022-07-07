@@ -13,8 +13,8 @@
 
 .container .modal {
   z-index: 1;
-  width: 30vw;
-  height: 60vh;
+  width: 100vw;
+  height: 80vh;
   background: white;
   display: flex;
   align-items: center;
@@ -42,5 +42,12 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container .modal {
+    width: 30vw;
+    height: 60vh;
   }
 }
