@@ -31,14 +31,13 @@ const AboutUs = ({ windowDimension }) => {
   return (
     <ScrollContainer>
       <ScrollPage page={0}>
-        
         <Animator animation={FadeUp}>
           <AboutUsScroller>
             <img
               src={
                 windowDimension.winWidth < 1300
-                  ? "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/mobileBackground.jpg"
-                  : "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/HomePageIcon.jpg"
+                  ? "https://storage.googleapis.com/cfspublic/Icons_HomePageIcon.jpg"
+                  : "https://storage.googleapis.com/cfspublic/Icons_HomePageIcon.jpg"
               }
               alt='Chocolate Fashion Logo, Transparent'
               className={
