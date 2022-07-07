@@ -95,7 +95,7 @@ const Sidebar = ({
                 Categories
               </CDBSidebarMenuItem>
             </NavLink> */}
-            <NavLink exact to='/Categories/Special_Occasions'>
+            {/* <NavLink exact to='/Categories/Special_Occasions'>
               <CDBSidebarMenuItem
                 className={
                   windowDimension.winHeight < 500
@@ -105,7 +105,7 @@ const Sidebar = ({
               >
                 Special Occasions
               </CDBSidebarMenuItem>
-            </NavLink>
+            </NavLink> */}
             {/* <NavLink exact to='/Categories/Special_Occasions/New_Born'>
               <CDBSidebarMenuItem
                 className={
