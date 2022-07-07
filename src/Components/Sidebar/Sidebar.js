@@ -106,7 +106,7 @@ const Sidebar = ({
                 Special Occasions
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to='/Categories/Special_Occasions/Engagements'>
+            <NavLink exact to='/Categories/Special_Occasions/New_Born'>
               <CDBSidebarMenuItem
                 className={
                   windowDimension.winHeight < 500
@@ -114,7 +114,7 @@ const Sidebar = ({
                     : "activeClicked"
                 }
               >
-                Engagements
+                New Born
               </CDBSidebarMenuItem>
             </NavLink>
 
@@ -127,6 +127,18 @@ const Sidebar = ({
                 }
               >
                 Weddings
+              </CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to='/Categories/Special_Occasions/Engagements'>
+              <CDBSidebarMenuItem
+                className={
+                  windowDimension.winHeight < 500
+                    ? "activeClicked-rotated"
+                    : "activeClicked"
+                }
+              >
+                Engagements
               </CDBSidebarMenuItem>
             </NavLink>
 
@@ -150,19 +162,7 @@ const Sidebar = ({
                     : "activeClicked"
                 }
               >
-                Communion
-              </CDBSidebarMenuItem>
-            </NavLink>
-
-            <NavLink exact to='/Categories/Special_Occasions/New_Born'>
-              <CDBSidebarMenuItem
-                className={
-                  windowDimension.winHeight < 500
-                    ? "activeClicked-rotated"
-                    : "activeClicked"
-                }
-              >
-                New Born
+                Premiere Communion
               </CDBSidebarMenuItem>
             </NavLink>
 

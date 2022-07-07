@@ -1,4 +1,21 @@
-.contactUsButtonSideBar {
-    
+.contactUsButton {
+  min-width: 5vw;
 
+  min-height: 8vh;
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.705);
+  z-index: 100;
+  color: #c8ab64;
+  border-style: none;
+  border-radius: 50%;
+  font-size: xx-large;
+  font-weight: bolder;
+  letter-spacing: 0.3rem;
+}
+
+.contactUsButton:hover {
+  background-color: white;
+  
 }

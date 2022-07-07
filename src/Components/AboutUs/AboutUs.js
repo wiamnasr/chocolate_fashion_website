@@ -12,10 +12,8 @@ import {
   Move,
 } from "react-scroll-motion";
 
-// import CFS_LOGO_BACKGROUND from "../../Resources/png/HomePageIcon.jpg";
-// import CFS_LOGO_BACKGROUND_MOBILE from "../../Resources/png/mobileBackground.jpg";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
-import HomePageSlideShow from "../HomePageSlideShow/HomePageSlideShow";
+import FounderMessageTyped from "./FounderMessageTyped";
 
 const styles = {
   bounce: {
@@ -33,6 +31,7 @@ const AboutUs = ({ windowDimension }) => {
   return (
     <ScrollContainer>
       <ScrollPage page={0}>
+        
         <Animator animation={FadeUp}>
           <AboutUsScroller>
             <img
@@ -64,17 +63,16 @@ const AboutUs = ({ windowDimension }) => {
             <StyleRoot>
               <div style={styles.flipInX} className='aboutUsSection'>
                 <h2 className='founderMessage'>
-                  Having relocated from Lebanon to the UK in 2020, I have
-                  brought with me a renewed vision for a future in which
-                  Chocolate Fashion Signature can reclaim its former glory,
-                  <br />
+                  <FounderMessageTyped />
+                  <br /> &emsp;&emsp;Fady Al Sabbagh, Founder
+                  <img
+                    src={CFS_LOGO_TRANSPARENT}
+                    alt='Chocolate Fashion Signature Logo'
+                    className='introLogoImage'
+                  />
                 </h2>
 
-                <div className='homepageSlideShowDisplay'>
-                  <HomePageSlideShow />
-                </div>
-
-                <h2 className='founderMessageToo'>
+                {/* <h2 className='founderMessageToo'>
                   going above and beyond anything delivered before in this
                   country. I have spent over a decade learning about and
                   developing this totally unique market.
@@ -84,7 +82,7 @@ const AboutUs = ({ windowDimension }) => {
                     alt='Chocolate Fashion Signature Logo'
                     className='introLogoImage'
                   />
-                </h2>
+                </h2> */}
               </div>
             </StyleRoot>
           </AboutUsScroller>

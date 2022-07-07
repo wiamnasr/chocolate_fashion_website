@@ -30,6 +30,8 @@ const Baptism = ({ windowDimension }) => {
     const allSubcategory2 = BaptismData.map((photo) => photo.Subcategory2);
     const subcategory2 = new Set(allSubcategory2);
     const subcategory2Array = Array.from(subcategory2);
+    subcategory2Array[2] = "3-Angelically White";
+    console.log(subcategory2Array);
 
     return subcategory2Array.map((subcategory2, index) => (
       <div
@@ -47,7 +49,9 @@ const Baptism = ({ windowDimension }) => {
 
   const subcategory2Mapper = (engagementDisplay) => {
     const allDisplayPicsUrlsForSubcategory2 = BaptismData.filter(
-      (imageItem) => imageItem.Subcategory2 === engagementDisplay
+      (imageItem) =>
+        imageItem.Subcategory2 === engagementDisplay &&
+        imageItem.ImagePublicUrl.includes(".JPG")
     ).map((photo) => photo.ImagePublicUrl);
     const displayPicsUrlsForSubcategory2 = new Set(
       allDisplayPicsUrlsForSubcategory2

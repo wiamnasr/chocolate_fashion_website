@@ -7,11 +7,11 @@ import React, { useState } from "react";
 const NewBornSubcategoryImages = [
   {
     name: "Baby Boy",
-    url: "https://storage.googleapis.com/chocolatefashionsignature.com/New_Born%2FBaby%20Boy%2FMon%20manege%20a%20moi%2F20141205_102117.jpg",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/itsABoy.jpg",
   },
   {
     name: "Baby Girl",
-    url: "https://storage.googleapis.com/chocolatefashionsignature.com/New_Born%2FBaby%20Girl%2FOrchid%2FIMG_4967.JPG",
+    url: "https://storage.googleapis.com/chocolatefashionsignature.com/Icons/itsAGirl.jpg",
   },
 ];
 

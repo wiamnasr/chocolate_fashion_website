@@ -54,8 +54,8 @@ export const AboutUsScroller = styled.div`
   }
 
   .founderMessage {
-    width: 87vw;
-    height: 28vh;
+    width: 80vw;
+    height: auto;
     background: rgba(255, 255, 255, 0.705);
     color: #c8ab64;
     word-spacing: 0.6rem;
@@ -65,29 +65,7 @@ export const AboutUsScroller = styled.div`
     font-weight: bolder;
     letter-spacing: 0.3rem;
     line-height: 1.6rem;
-  }
-
-  .homepageSlideShowDisplay {
-    width: 87vw;
-    height: 35vh;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 1vw;
-  }
-
-  .founderMessageToo {
-    width: 87vw;
-    height: 35vh;
-    background: rgba(255, 255, 255, 0.705);
-    color: #c8ab64;
-    word-spacing: 0.6rem;
-    margin: 0.5rem 1vw 0 0;
-    padding: 2rem 0.5rem 0.5rem 0.5rem;
-    font-size: 1.4rem;
-    font-weight: bolder;
-    letter-spacing: 0.3rem;
-    line-height: 1.6rem;
-  }
+  }  
 
   .introLogoImage {
     width: 7rem;
@@ -101,59 +79,35 @@ export const AboutUsScroller = styled.div`
     }
 
     .founderMessage {
-      word-spacing: 0.5rem;
-      font-size: 1.8rem;
-      letter-spacing: 0.5rem;
-      line-height: 1.8rem;
+      width: 70vw;
     }
 
-    .founderMessageToo {
-      word-spacing: 0.5rem;
-      font-size: 1.8rem;
-      letter-spacing: 0.5rem;
-      line-height: 1.8rem;
-    }
+    
   }
 
-  @media screen and (min-width: 875px) {
-    .homepageSlideShowDisplay {
-      height: 45vh;
-    }
-  }
+
 
   @media screen and (min-width: 1000px) {
     .aboutUsSection {
       justify-content: center;
     }
 
-    .founderMessage,
-    .founderMessageToo {
-      width: 75vw;
-      height: 25vh;
+    .founderMessage {
+      width: 55vw;
     }
 
-    .homepageSlideShowDisplay {
-      height: 47vh;
-      width: 85vw;
-      margin-left: 1rem;
-    }
+
+    
   }
 
   @media screen and (min-width: 1300px) {
-    .aboutUsTextContent {
-      font-size: 1.6rem;
+    .founderMessage {
+      font-size: 1.8rem;
+      line-height: 2rem;
+
     }
 
-    .founderMessage,
-    .founderMessageToo {
-      width: 60vw;
-      height: 20vh;
-    }
-
-    .homepageSlideShowDisplay {
-      height: 55vh;
-      width: 75vw;
-      margin-left: 20vw;
-    }
+  
+    
   }
 `;
