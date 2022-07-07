@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+  import "./Sidebar.css";
 import CFS_LOGO_TRANSPARENT from "../../Resources/svg/CFS_LOGO_TRANSPARENT.svg";
 
 import {
@@ -106,7 +106,7 @@ const Sidebar = ({
                 Special Occasions
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to='/Categories/Special_Occasions/New_Born'>
+            {/* <NavLink exact to='/Categories/Special_Occasions/New_Born'>
               <CDBSidebarMenuItem
                 className={
                   windowDimension.winHeight < 500
@@ -176,7 +176,7 @@ const Sidebar = ({
               >
                 Gift Giving
               </CDBSidebarMenuItem>
-            </NavLink>
+            </NavLink> */}
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
